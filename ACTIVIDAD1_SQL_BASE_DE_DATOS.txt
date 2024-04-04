@@ -1,0 +1,35 @@
+CREATE DATABASE Empresa_UNI;
+
+USE Empresa_UNI;
+
+CREATE TABLE Datos_empleados(
+
+Numero_empleado varchar (40)primary key NOT NULL ,
+Nombre varchar (50)  NOT NULL,
+Apellido_paterno varchar (40) NOT NULL,
+Apellido_materno varchar (40) NOT NULL,
+Fecha_de_nacimiento varchar (40) NOT NULL,
+RFC varchar (15) NOT NULL,
+Centro_trabajo varchar (40) NOT NULL,
+Puesto varchar (15)  NOT NULL,
+Descripcion_del_puesto varchar (40) NOT NULL);
+
+CREATE TABLE Datos_directivos(
+
+Numero_directivo  varchar (10) primary key not null,
+Centro_trabajo_supervisa varchar (40) NOT NULL,
+Prestacion_combustible text NOT NULL,
+Ciudad text  NOT NULL,
+Region varchar (15) NOT NULL,
+Directivo BIT NOT NULL,
+);
+
+CREATE TABLE Centros_de_trabajo(
+
+numero_centro varchar (10) primary key not null,
+Nombre_de_centro varchar (20) NOT NULL,
+Numero_telefonico varchar (15) NOT NULL,
+Correo_electronico varchar (50) NOT NULL,
+Direccion varchar (50) NOT NULL,
+Referencias varchar (30) NOT NULL,
+);
